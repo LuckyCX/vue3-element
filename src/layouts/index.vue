@@ -40,7 +40,6 @@ watchEffect(() => {
 
 /** 开启或关闭系统水印 */
 watchEffect(() => {
-    console.log(showWatermark.value, "-------------")
     showWatermark.value ? setWatermark(import.meta.env.VITE_APP_TITLE) : clearWatermark()
 })
 </script>
