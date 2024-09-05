@@ -18,7 +18,7 @@ const loading = ref(false)
 /** 登录表单数据 */
 const loginFormData: LoginRequestData = reactive({
     username: "admin",
-    password: "12345678"
+    password: "admin123"
 })
 /** 登录表单校验规则 */
 const loginFormRules: FormRules = {
@@ -104,7 +104,8 @@ const handleLogin = () => {
     background-position: center;
     background-size: cover;
     .login-card {
-        width: 480px;
+        margin-left: 40%;
+        width: 560px;
         max-width: 90%;
         border-radius: 20px;
         box-shadow: 0 0 10px #dcdfe6;
@@ -114,28 +115,41 @@ const handleLogin = () => {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 150px;
+            height: 144px;
+            background-image: url("@/assets/login/login-title.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            span {
+                height: 28px;
+                font-size: 28px;
+                font-family:
+                    Alibaba PuHuiTi 2,
+                    Alibaba PuHuiTi 2-600;
+                font-weight: 600;
+                text-align: LEFT;
+                color: #ffffff;
+                line-height: 28px;
+            }
             img {
                 height: 100%;
             }
         }
         .content {
-            padding: 20px 50px 50px 50px;
-            :deep(.el-input-group__append) {
-                padding: 0;
-                overflow: hidden;
-                .el-image {
-                    width: 100px;
-                    height: 40px;
-                    border-left: 0px;
-                    user-select: none;
-                    cursor: pointer;
-                    text-align: center;
-                }
+            padding: 26px 100px 66px 100px;
+            .el-form-item {
+                margin-bottom: 24px;
+            }
+            :deep(.el-input__wrapper) {
+                width: 360px;
+                height: 54px;
             }
             .el-button {
-                width: 100%;
-                margin-top: 10px;
+                width: 360px;
+                height: 52px;
+                background: linear-gradient(270deg, #5865f2 0%, #197cff);
+                border-radius: 8px;
+                box-shadow: 0px 10px 20px 0px rgba(26, 58, 171, 0.3);
             }
         }
     }
